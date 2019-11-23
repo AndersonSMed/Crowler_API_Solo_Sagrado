@@ -125,3 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Configurações do Celery
+
+CELERY_timezone = 'America/Recife'
