@@ -19,7 +19,8 @@ class List(generics.ListAPIView):
                 Q(
                     Q(titulo__icontains = nome) |
                     Q(codigo__icontains = nome)
-                )
+                ),
+                mais_recente = True
             )
 
         return queryset[:query_size]
