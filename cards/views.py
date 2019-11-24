@@ -17,8 +17,7 @@ class List(generics.ListAPIView):
         if nome is not None:
             queryset = queryset.filter(
                 Q(
-                    Q(titulo__icontains = nome) |
-                    Q(codigo__icontains = nome)
+                    Q(titulo__icontains = nome)
                 ),
                 mais_recente = True
             )
