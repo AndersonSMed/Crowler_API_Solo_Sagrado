@@ -17,7 +17,7 @@ def load_cards():
 
         page = requests.get(url_pagina)
 
-        soup = BeautifulSoup(page.text, 'html.parser')
+        soup = BeautifulSoup(page.content.decode('utf-8','ignore'), 'html.parser')
 
         card_items = soup.find_all('div', class_='product_item')
 
