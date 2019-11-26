@@ -25,7 +25,9 @@ SECRET_KEY = '55jx9pb!@rd=1lodh^r#uxg4=j6wstp04k!^=#a7+!g(xtm9^^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api.olhodomilenio.matheusalves.com.br'
+]
 
 
 # Application definition

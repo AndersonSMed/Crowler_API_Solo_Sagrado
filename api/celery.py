@@ -14,6 +14,6 @@ app.conf.timezone = 'America/Recife'
 app.conf.beat_schedule = {
     'run_every_day': {
         'task': 'celery_tasks.tasks.load_cards',
-        'schedule': crontab(hour = 3, minute = 00)
+        'schedule': crontab(hour = 3, minute = 0)
     }
 }
