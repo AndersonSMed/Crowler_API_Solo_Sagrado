@@ -75,13 +75,22 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        # Nome da coleção
-        'NAME': 'cards',
+import json
+
+with open('database.json') as database_file:
+    
+    database_config = json.load(database_file)
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            # Nome da coleção
+            "NAME": database_config.get('NAME'),
+            "USER": database_config.get('USER'),
+            "PASSWORD": database_config.get('PASSWORD'),
+            "HOST": database_config.get('HOST')
+        }
     }
-}
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
