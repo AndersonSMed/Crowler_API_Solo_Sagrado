@@ -1,12 +1,13 @@
-from api.celery import app
+from celery import shared_task
 from bs4 import BeautifulSoup
 from cards.serializers import General as CardSerializer
 
 import requests
 
-
-@app.task
+@shared_task
 def load_cards():
+
+    print("DEU BOM")
 
     num_pagina = 1
 
