@@ -7,8 +7,6 @@ import requests
 @shared_task
 def load_cards():
 
-    print("DEU BOM")
-
     num_pagina = 1
 
     while True:
