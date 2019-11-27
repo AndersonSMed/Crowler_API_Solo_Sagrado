@@ -22,4 +22,4 @@ class List(generics.ListAPIView):
                 mais_recente = True
             )
 
-        return queryset[:query_size]
+        return queryset[:int(query_size)]
