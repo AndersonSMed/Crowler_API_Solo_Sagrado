@@ -26,7 +26,9 @@ SECRET_KEY = '55jx9pb!@rd=1lodh^r#uxg4=j6wstp04k!^=#a7+!g(xtm9^^'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'api.olhodomilenio.matheusalves.com.br'
+    'api.olhodomilenio.matheusalves.com.br',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
