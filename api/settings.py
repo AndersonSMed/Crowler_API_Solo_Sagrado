@@ -119,6 +119,10 @@ else:
         'https://api.olhodomilenio.matheusalves.com.br'
     ]
 
+    CSRF_TRUSTED_ORIGINS = [
+        'api.olhodomilenio.matheusalves.com.br',
+    ]
+
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
