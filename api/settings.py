@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'cards',
     'celery_tasks'
 ]
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,6 +103,21 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ] 
 }
+
+# CORS settings
+
+if DEBUG:
+
+    CORS_ORIGIN_ALLOW_ALL = True
+
+else:
+
+    CORS_ORIGIN_ALLOW_ALL = False
+
+    CORS_ORIGIN_WHITELIST = [
+        'http://api.olhodomilenio.matheusalves.com.br',
+        'https://api.olhodomilenio.matheusalves.com.br'
+    ]
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
